@@ -1,0 +1,45 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<center>
+	<div style="padding-top:50px;">
+		<h1>Serverless and Amazon Services</h1>
+		<h2>Github project : <a href="https://github.com/tomaszdrzazga/amazon-lambda-rest-api">https://github.com/tomaszdrzazga/amazon-lambda-rest-api</a></h2>
+		<br/><br/>
+		<h2>Accounts API</h2>
+		<form action="https://YOUR-API-URL/prod/users" method="POST">
+			<table>
+				<tr>
+					<td>Name</td><td>Email</td><td></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="name"/></td><td><input type="text" name="email"/></td><td><input type="submit" value="add"/></td>
+				</tr>
+			</table>
+		</form>
+		<br/>
+		<div id="result"></div>
+		<script>
+
+            $.ajax({
+                type: "GET",
+                url: 'https://YOUR-API-URL/prod/users',
+                data: '',
+                crossDomain: true,
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function(response) {
+                    $('#result').html('Success : '+ JSON.stringify(response));
+                },
+                error: function(response) {
+                    $('#result').html('Failure');
+                },
+            });
+
+		</script>
+		<div>
+</center>
+</body>
+</html>
