@@ -19,7 +19,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-
     @GetMapping
     public @ResponseBody
     Iterable<User> findAll() {
@@ -49,7 +48,7 @@ public class UserController {
     public @ResponseBody
     ResponseEntity<String> updateUser(@PathVariable Integer id, @RequestParam String name, @RequestParam String email) {
         Optional<User> user = userRepository.findById(id);
-        if (user.isPresent()){
+        if (user.isPresent()) {
             User userToUpdate = user.get();
             userToUpdate.setEmail(email);
             userToUpdate.setName(name);
@@ -58,5 +57,4 @@ public class UserController {
         }
         return new ResponseEntity<String>("bad request", HttpStatus.BAD_REQUEST);
     }
-
 }
