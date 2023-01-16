@@ -1,4 +1,4 @@
-# AWS Lambda JAVA8 REST API - serverless
+# AWS Lambda JAVA11 REST API - serverless
 
 ### Spring boot application with Rest API as a proxy to Amazon RDS MySQL databse.
 
