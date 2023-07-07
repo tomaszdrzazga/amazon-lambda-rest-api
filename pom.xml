@@ -26,7 +26,7 @@
 		<aws-serverless-java-container-springboot2.version>1.9.1</aws-serverless-java-container-springboot2.version>
 		<lambda-logging.version>1.0.3</lambda-logging.version>
 		<mysql-connector-java.version>8.0.31</mysql-connector-java.version>
-		<h2.version>2.1.214</h2.version>
+		<h2.version>2.2.220</h2.version>
 		<jakarta.xml.bind-api.version>2.3.2</jakarta.xml.bind-api.version>
 		<jaxb-runtime.version>2.3.2</jaxb-runtime.version>
 	</properties>
